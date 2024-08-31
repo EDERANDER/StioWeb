@@ -725,7 +725,6 @@ window.addEventListener('load', async () => {
             nombres, 
             placa, 
             horometro, 
-            nombre_jefe,
             observaciones,
             revisionTecnicaShort, 
             parabrisasShort, 
