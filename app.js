@@ -781,7 +781,7 @@ window.addEventListener('load', async () => {
     })
 });
 
-async function generatePDF(nombres, placa, horometro,nombre_jefe,observaciones, revisionTecnica, parabrisas, plumillas, 
+async function generatePDF(nombres, placa, horometro,observaciones, revisionTecnica, parabrisas, plumillas, 
                             vidrios_laterales, parabrisas_trasero, pasamanos,puerta, manillasDePuertas,
                             espejosLaterales, espejoInterior, asientoOperador, balancin, contrapeso, 
                             cabina, canerias, cunasDeMartillo, pasadores, extintor, triangulos, botiquin,
@@ -824,7 +824,6 @@ async function generatePDF(nombres, placa, horometro,nombre_jefe,observaciones, 
     pdf.text(nombres, 160, 127);
     pdf.text(placa, 160, 144);
     pdf.text(horometro, 375, 144);
-    pdf.text(nombre_jefe, 280, 715);
     pdf.text(observaciones,50, 620);
     
 
