@@ -29,7 +29,6 @@ window.addEventListener('load', async () => {
         let nombres = document.getElementById('nombre').value;
         let placa = document.getElementById('placa').value;
         let horometro = document.getElementById('horometro').value;
-        let nombre_jefe = document.getElementById('jefe').value;
         let observaciones = document.getElementById('observaciones').value;
 
          // Obtener la opción seleccionada de "Revisión técnica"
