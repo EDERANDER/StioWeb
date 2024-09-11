@@ -31,6 +31,10 @@ window.addEventListener('load', async () => {
         let horometro = document.getElementById('horometro').value;
         let observaciones = document.getElementById('observaciones').value;
 
+        let nombreJefe = document.getElementById('nombreJefe').value;
+        let dniJefe = document.getElementById('dniJefe').value;
+
+
          // Obtener la opción seleccionada de "Revisión técnica"
         let revisionTecnica = document.querySelector('input[name="revision_tecnica"]:checked').value;
         let revisionTecnicaShort = '';
@@ -772,7 +776,10 @@ window.addEventListener('load', async () => {
             cucharronShort,
             brazoShort,
             cilindro_hidraulicoShort,
-            circulinaShort
+            circulinaShort,
+
+            nombreJefe,
+            dniJefe
 
 
         );
@@ -788,7 +795,7 @@ async function generatePDF(nombres, placa, horometro,observaciones, revisionTecn
                             oruga, caja_conductora_oruga, rodillos_inferiores, rodillos_superiores, sistema_tensor,
                             zapatas_oruga, logo_empresa, limpieza_interior_cabina, limpieza_externa, fugas_visibles,
                             marcador_nivel_combustible, marcador_temperatura, marcador_presion_aceite, horometrot, panel_control,
-                            acelerador_manual, palanca_bloqueo_hidraulico, cucharron, brazo, cilindro_hidraulico, circulina) {
+                            acelerador_manual, palanca_bloqueo_hidraulico, cucharron, brazo, cilindro_hidraulico, circulina, nombreJefe, dniJefe) {
     // Cargar la imagen JPG
     const image = await loadImage("formulario.jpg");
         
