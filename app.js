@@ -1260,8 +1260,15 @@ async function generatePDF(nombres, placa, horometro,observaciones, revisionTecn
         pdf.text('A', 517, 505);  // posición para "No Aplica"
     }
 
+
+    pdf.setFont("times", "italic"); // Cambia el tipo de fuente a Times y estilo a cursiva (italic)
+    pdf.text(nombreJefe, 287, 657);
+    pdf.text('DNI ' + dniJefe, 287, 665);
+    pdf.text(formattedDate, 287, 673);
+
+    
     pdf.setFillColor(0,0,0);
-    pdf.save("example.pdf");
+    pdf.save(`CF-${nombres}-${formattedDate}.pdf`);
 
     location.reload(); // Actualiza la página después de generar el PDF
 }
