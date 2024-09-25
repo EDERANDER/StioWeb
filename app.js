@@ -28,6 +28,8 @@ window.addEventListener('load', async () => {
 
         
         let nombres = document.getElementById('nombre').value;
+
+        let dniOp = document.getElementById('dniOp').value;
         let placa = document.getElementById('placa').value;
         let horometro = document.getElementById('horometro').value;
         let observaciones = document.getElementById('observaciones').value;
@@ -728,6 +730,7 @@ window.addEventListener('load', async () => {
 
         generatePDF(
             nombres, 
+            dniOp,
             placa, 
             horometro, 
             observaciones,
@@ -788,7 +791,7 @@ window.addEventListener('load', async () => {
     })
 });
 
-async function generatePDF(nombres, placa, horometro,observaciones, revisionTecnica, parabrisas, plumillas, 
+async function generatePDF(nombres, dniOp, placa, horometro,observaciones, revisionTecnica, parabrisas, plumillas, 
                             vidrios_laterales, parabrisas_trasero, pasamanos,puerta, manillasDePuertas,
                             espejosLaterales, espejoInterior, asientoOperador, balancin, contrapeso, 
                             cabina, canerias, cunasDeMartillo, pasadores, extintor, triangulos, botiquin,
@@ -1260,6 +1263,13 @@ async function generatePDF(nombres, placa, horometro,observaciones, revisionTecn
     } else if (circulina === 'NA') {
         pdf.text('A', 517, 505);  // posición para "No Aplica"
     }
+
+
+    pdf.setFont("times", "italic"); // Cambia el tipo de fuente a Times y estilo a cursiva (italic)
+    pdf.text(nombres, 50, 657);
+    pdf.text('DNI ' + dniOp, 50, 665);
+    pdf.text(formattedDate, 50, 673);
+
 
 
     pdf.setFont("times", "italic"); // Cambia el tipo de fuente a Times y estilo a cursiva (italic)
